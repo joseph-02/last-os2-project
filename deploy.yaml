@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: deploy-one
+
+spec:
+  selector:
+    matchLabels:
+      app: my-web-app
+       
+  replicas: 3
+
+  template:
+    metadata:
+      name: pod-one
+      labels:
+        app: my-web-app
+    spec:
+      containers:
+        - image: joseph0/nginx-test
+          imagePullPolicy: IfNotPresent
+          name: os2project
+    

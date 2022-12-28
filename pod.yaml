@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: last-os2-project
+spec:
+  containers:
+    - name: nginx-webapp
+      image: joseph0/nginx-test
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 80  
